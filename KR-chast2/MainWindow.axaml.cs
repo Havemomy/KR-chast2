@@ -1,11 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
+using MySql.Data.MySqlClient;
+using Action = KR_chast2.Entities.Action;
 
 namespace KR_chast2;
 
 public partial class MainWindow : Window
 {
+    public string _connString = "server = localhost; database = pro1_10; port = 3306; User = user_01 password = user01pro";
+    private List<Action> _actions;
+    private MySqlConnection _connection;
     public MainWindow()
     {
         InitializeComponent();
+        ShowTable();
+    }
+
+    private void ShowTable()
+    {
+        string sql = " select * from Action";
+        _actions = new List<Action>();
+        _connection = new MySqlConnection(_connString);
+        _connection.Open();
+        MySqlCommand command = new MySqlCommand(sql, _connection);
+        MySqlDataReader reader = command.ExecuteReader();
+        while (reader.Read() && reader.HasRows)
+        {
+            var currentAction = new Action()
+            {
+                ActionId = reader.GetInt32(column:"Id"),
+                Organizator = reader.GetInt32(column:"Organizator"),
+                Volonter = reader.GetInt32(column:"Volonter"),
+                Cash = reader.GetString(column:"Cash"),
+                Date = reader.GetDateTime(column:"Date")
+            };
+            _actions.Add(currentAction);
+        }
+        _connection.Close();
+        VolonterGrid.ItemsSource = _actions;
+    }
+
+    private void DelBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var selectedItem = VolonterGrid.SelectedItem as Action;
+        if (selectedItem is null)
+        {
+            return;
+        }
+        _connection.Open();
+        string sql = "delete from Action where Id = @id";
+        MySqlCommand command = new MySqlCommand(sql, _connection);
+        command.Parameters.AddWithValue("@Id", selectedItem.ActionId);
+        command.ExecuteNonQuery();
+        _connection.Close();
+        var newList = VolonterGrid.ItemsSource.Cast<Action>().ToList();
+        var itemToRemove = newList.FirstOrDefault(x => x.ActionId == selectedItem.ActionId);
+        newList.Remove(itemToRemove);
+        VolonterGrid.ItemsSource = newList;
     }
 }

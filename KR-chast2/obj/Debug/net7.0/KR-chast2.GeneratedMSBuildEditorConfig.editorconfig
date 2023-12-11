@@ -13,10 +13,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KR-chast2
-build_property.ProjectDir = /home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/
+build_property.ProjectDir = C:\Users\vovan\RiderProjects\KR-chast2\KR-chast2\
 
-[/home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/App.axaml]
+[C:/Users/vovan/RiderProjects/KR-chast2/KR-chast2/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/MainWindow.axaml]
+[C:/Users/vovan/RiderProjects/KR-chast2/KR-chast2/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -5365,19 +5365,19 @@
     ]
   },
   "packageFolders": {
-    "/home/KHPK.RU/student/.nuget/packages/": {}
+    "C:\\Users\\vovan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/KR-chast2.csproj",
+      "projectUniqueName": "C:\\Users\\vovan\\RiderProjects\\KR-chast2\\KR-chast2\\KR-chast2.csproj",
       "projectName": "KR-chast2",
-      "projectPath": "/home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/KR-chast2.csproj",
-      "packagesPath": "/home/KHPK.RU/student/.nuget/packages/",
-      "outputPath": "/home/KHPK.RU/student/Рабочий стол/Project3/KR-chast2/KR-chast2/obj/",
+      "projectPath": "C:\\Users\\vovan\\RiderProjects\\KR-chast2\\KR-chast2\\KR-chast2.csproj",
+      "packagesPath": "C:\\Users\\vovan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vovan\\RiderProjects\\KR-chast2\\KR-chast2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/KHPK.RU/student/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\vovan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5446,7 +5446,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
